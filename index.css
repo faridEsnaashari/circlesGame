@@ -1,0 +1,11 @@
+svg{
+    width:10000px;
+    height:800px;
+    margin-top:-.5em;
+    /* background-color:red; */
+}
+#timerShowSec,#timerShowMin,#seprator
+{
+    height:1em;
+    margin-top:-.5em;
+}
