@@ -50,7 +50,7 @@ function startBtn(){
     document.querySelector("#timerShowSec").style.display="inline-block";
     document.querySelector("#timerShowMin").style.display="inline-block";
     document.querySelector("#seprator").style.display="inline-block";
-    window.setTimeout(endGame,2000);
+    window.setTimeout(endGame,120000);
     window.setInterval(increseTimer,1000);
 }
 function increseTimer(){
