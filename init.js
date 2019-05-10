@@ -3,4 +3,5 @@ document.addEventListener("DOMContentLoaded",function(){
     document.querySelector("#timerShowSec").style.display="none";
     document.querySelector("#timerShowMin").style.display="none";
     document.querySelector("#seprator").style.display="none";
+    document.querySelector("#gameOver").style.display="none";
 });

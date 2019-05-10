@@ -50,7 +50,7 @@ function startBtn(){
     document.querySelector("#timerShowSec").style.display="inline-block";
     document.querySelector("#timerShowMin").style.display="inline-block";
     document.querySelector("#seprator").style.display="inline-block";
-    window.setTimeout(endGame,120000);
+    window.setTimeout(endGame,2000);
     window.setInterval(increseTimer,1000);
 }
 function increseTimer(){
@@ -74,5 +74,11 @@ function increseTimer(){
 }
 
 function endGame(){
-    console.log("game was ended");
+    document.querySelector("#seprator").style.display="none";
+    document.querySelector("#timerShowMin").style.display="none";
+    document.querySelector("#timerShowSec").style.display="none";
+    document.querySelector("svg").style.display="none";
+
+    document.querySelector("#gameOver").style.display="block";
+    document.querySelector("#gameOver").innerHTML="the game is over...<br>your score is<br>"+playerScore;
 }
