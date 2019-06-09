@@ -1,11 +1,14 @@
 function drawPlane(){
     var circlesSizez=[];
-    
+
     for(i=0; i<30; i++){
 
-        randRadios=Math.floor(Math.random()*40)+41;
-        randCx=Math.floor(Math.random()*(window.innerWidth-((randRadios+30)*2)))+randRadios;
-        randCy=Math.floor(Math.random()*(window.innerHeight-((randRadios+30)*2)))+randRadios;
+        // randRadios=Math.floor(Math.random()*40)+41;
+        randRadios=((Math.random()*40)+41)/16;
+        // randCx=Math.floor(Math.random()*(window.innerWidth-((randRadios+30)*2)))+randRadios;
+        randCx=((Math.random()*(window.innerWidth-((randRadios+30)*2)))+randRadios)/16;
+        // randCy=Math.floor(Math.random()*(window.innerHeight-((randRadios+30)*2)))+randRadios;
+        randCy=((Math.random()*(window.innerHeight-((randRadios+30)*2)))+randRadios)/16;
         randColor=Math.floor(Math.random()*3);
 
 
@@ -39,9 +42,9 @@ function drawCircle(radios,cx,cy,id,color){
     svg=d3.select('svg');
 
     svg.append('circle')
-    .attr('cx',cx)
-    .attr('cy',cy)
-    .attr('r',radios)
+    .attr('cx',cx+"em")
+    .attr('cy',cy+"em")
+    .attr('r',radios+"em")
     .attr('id',"circle"+id)
     .style('fill',color);
 
