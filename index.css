@@ -2,7 +2,8 @@ svg{
     width:10000px;
     height:800px;
     margin-top:-.5em;
-    background-color:black;
+/*     background-color:black; */
+    background-color:red;
 }
 #timerShowSec,#timerShowMin,#seprator
 {
