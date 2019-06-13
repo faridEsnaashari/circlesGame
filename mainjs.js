@@ -80,5 +80,14 @@ function endGame(){
     document.querySelector("svg").style.display="none";
 
     document.querySelector("#gameOver").style.display="block";
-    document.querySelector("#gameOver").innerHTML="the game is over...<br>your score is<br>"+playerScore;
+    document.querySelector("#gameOverDiscription").innerHTML="the game is over...<br>your score is<br>"+playerScore;
+    sendDataToBot();
+
+}
+
+
+function sendDataToBot(){
+    xmlObject=new  XMLHttpRequest();
+    xmlObject.open("GET","https://gameplatformtelegrambot.000webhostapp.com/bot_game.php?inline_id="+ginline_id+"&user_id="+guser_id+"&score="+playerScore);
+    xmlObject.send();
 }
